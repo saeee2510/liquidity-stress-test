@@ -1,0 +1,92 @@
+{
+  "scenarios": {
+    "Baseline": {
+      "description": "Regulatory-style 30-day stress (simplified Basel III LCR assumptions)",
+      "hqla": 12200.0,
+      "outflows_30d": 11200.0,
+      "inflows_30d": 2500.0,
+      "kris": {
+        "LCR": {
+          "value": 1.4022988505747127,
+          "status": "Green"
+        },
+        "Survival days": {
+          "value": 90,
+          "status": "Green"
+        },
+        "Level 1 share of HQLA": {
+          "value": 0.819672131147541,
+          "status": "Green"
+        },
+        "Largest funding source share": {
+          "value": 0.3,
+          "status": "Green"
+        },
+        "Undrawn commitments / HQLA": {
+          "value": 0.7377049180327869,
+          "status": "Amber"
+        }
+      }
+    },
+    "Moderate: reputational event": {
+      "description": "Firm-specific stress: negative news drives customers and merchants to move balances",
+      "hqla": 12200.0,
+      "outflows_30d": 13830.0,
+      "inflows_30d": 2200.0,
+      "kris": {
+        "LCR": {
+          "value": 1.049011177987962,
+          "status": "Amber"
+        },
+        "Survival days": {
+          "value": 21,
+          "status": "Red"
+        },
+        "Level 1 share of HQLA": {
+          "value": 0.819672131147541,
+          "status": "Green"
+        },
+        "Largest funding source share": {
+          "value": 0.3,
+          "status": "Green"
+        },
+        "Undrawn commitments / HQLA": {
+          "value": 0.7377049180327869,
+          "status": "Amber"
+        }
+      }
+    },
+    "Severe: combined market and firm stress": {
+      "description": "Reputational event during a market-wide shock: deposit run, credit line drawdowns, wider haircuts",
+      "hqla": 11900.0,
+      "outflows_30d": 19500.0,
+      "inflows_30d": 1750.0,
+      "kris": {
+        "LCR": {
+          "value": 0.6704225352112676,
+          "status": "Red"
+        },
+        "Survival days": {
+          "value": 9,
+          "status": "Red"
+        },
+        "Level 1 share of HQLA": {
+          "value": 0.8403361344537815,
+          "status": "Green"
+        },
+        "Largest funding source share": {
+          "value": 0.3,
+          "status": "Green"
+        },
+        "Undrawn commitments / HQLA": {
+          "value": 0.7563025210084033,
+          "status": "Amber"
+        }
+      }
+    }
+  },
+  "reverse_stress": {
+    "lcr_breach_intensity": 0.375,
+    "survival_breach_intensity": 0.27
+  }
+}
